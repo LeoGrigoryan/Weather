@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-drag: none;
+    outline: none;
+    border: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    padding: 0 1rem;
+}
+
+.box {
+    background: transparent;
+    border-radius: 30px;
+    width: 40rem;
+    height: 50rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#61F2D8 0%, #0067FF 100%);
+    backdrop-filter: blur(100px);
+}
+
+.box header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+}
+
+.box header .textbox {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.box header .textbox input {
+    font: 100 1.5rem cursiv;
+    height: 5rem;
+    width: 90%;
+    text-indent: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    color: #fff !important;
+    letter-spacing: .1rem;
+    background: #000;
+    box-shadow: 0 5px 2px 0px #000;
+    transition: .2s;
+}
+
+.box header .textbox input:focus {
+    box-shadow: 0 0px 2px 0px #000;
+    translate: 0 5px;
+}
+
+.box header .textbox input::placeholder {
+    scale: 1;
+    opacity: 1;
+    transition: .35s;
+    position: absolute;
+    left: 0;
+    color: #ffffff67;
+}
+
+.box header .textbox input:focus::placeholder {
+    opacity: 0;
+}
+
+.box header .textbox button {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    background: #000;
+    box-shadow: 0 5px 2px 0px #000;
+}
+
+.box header .textbox button:hover {
+    box-shadow: 0 0px 2px 0px #000;
+    translate: 0 5px;
+}
+
+.box header .textbox button i {
+    font-size: 2rem;
+    color: #fff !important;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    color: #fff;
+    width: 20rem;
+    height: 20rem;
+    gap: 1rem;
+    border-radius: 30px;
+    background: #000;
+    border: .1rem solid #000;
+    box-shadow: 0 8px 2px 1px #000;
+}
+
+h1 {
+    font: lighter 8rem cursiv;
+    transform: scaleY(.955);
+    line-height: 10rem;
+}
+
+.main h3 {
+    font: 100 2.5rem cursiv;
+    text-transform: uppercase;
+}
+
+.switch {
+    display: flex;
+    width: 10rem;
+    height: 5rem;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background: #0000008b;
+    position: absolute;
+    bottom: 3rem;
+    box-shadow: 0 5px 1px 0px #000;
+    border: 1px solid #000;
+    transition: .2s;
+}
+
+.switch:hover {
+    box-shadow: 0 0px 1px 0px #000;
+    translate: 0 5px;
+}
+
+.switch .part {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font: bold 2rem system-ui;
+    color: #fff;
+}
+
+.switch .part:nth-child(2) {
+    background: #000;
+}
+
+.switch .part:nth-child(1) {
+    opacity: .5;
+}
+
+@media only screen and (max-width: 1750px) {
+    .box {
+        height: 30rem;
+        max-width: 27rem;
+    }
+
+    .switch {
+        height: 3rem;
+        width: 6rem;
+    }
+
+    .switch .part {
+        font: bold 1.5rem system-ui;
+    }
+
+    .main {
+        padding: 2rem 0;
+        width: 14rem;
+        height: 14rem;
+        gap: 0;
+    }
+
+    h1 {
+        font: lighter 5rem cursiv;
+    }
+
+    .main h3 {
+        font-size: 1.3rem;
+    }
+
+    .box header .textbox input {
+        width: calc(100% - 3.5rem);
+        height: 3rem;
+        text-indent: 1.5rem;
+        font-size: 1.1rem !important;
+    }
+
+    .box header .textbox button {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .box header .textbox button i {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .box header {
+        padding: 2rem 1rem;
+    }
+    .box header .textbox input {
+        text-indent: 1rem;
+        font-size: .9rem !important;
+    }
+    .main {
+        width: 12rem;
+        height: 12rem;
+    }
+    h1 {
+        font: lighter 4rem cursiv;
+    }
+    .main h3 {
+        font-size: 1.2rem;
+    }
+}
+@font-face {
+    font-family: cursiv;
+    src: url(GlacialIndifference-Regular.otf);
+}
